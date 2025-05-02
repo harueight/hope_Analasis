@@ -1,0 +1,18 @@
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    ports:
+      - 8888:8888
+    volumes:
+      - type: bind
+        source: .
+        target: /home/jovyan/work
+        consistency: cached
+    command:  # 以下を指定することでトークンなしでアクセスできるようになる
+      - "start-notebook.py"
+      - "--IdentityProvider.token=''"
+
+        

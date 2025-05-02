@@ -1,0 +1,38 @@
+{
+    "name": "python",
+    "dockerComposeFile": ["../docker-compose.yml"],
+    "service": "python",
+    "workspaceFolder": "/home/jovyan/work",
+    "shutdownAction": "none",
+    "forwardPorts": [8888],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                // "python.defaultInterpreterPath": "/usr/local/bin/python"  //なにこれ
+                "python.defaultInterpreterPath": "/opt/conda/bin/python",
+                "jupyter.viewType": "notebook",
+                // "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.fontSize": 12
+                // "terminal.integrated.cursorStyle": "block",            
+                // "editor.formatOnSave": true,
+                // "files.encoding": "utf8"
+            },
+            "extensions": [
+                "ms-python.python",                         //なにこれ
+                "ms-toolsai.jupyter",                       //なにこれ
+                "mechatroner.rainbow-csv"                      //csvファイルの色付け
+                // "ms-python.vscode-pylance"
+                // "esbenp.prettier-vscode",                   //コード整形ツール
+                // "VisualStudioExptTeam.vscodeintellicode",   //AIを活用しより高度で文脈に応じたコード提案を行う。
+                // "christian-kohler.path-intellisense",       //ファイルやフォルダをインポートする際、パスを入力する手間を省略。
+                // // "mhutchie.git-graph",                      //ブランチやコミットの流れをグラフ形式で確認可能。
+                // // "donjayamanne.githistory",                 //Gitのコミット履歴を表示。
+                // "oderwat.indent-rainbow",                   //インデントをレインボーカラーで視覚化。
+                // "vscode-icons-team.vscode-icons"            //ファイルやフォルダに視覚的なアイコンを追加。
+            ]
+        }
+    }
+}
+
+
+

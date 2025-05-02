@@ -1,0 +1,10 @@
+ipykernel 
+jupyter 
+jupyterlab 
+notebook
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+japanize_matplotlib
