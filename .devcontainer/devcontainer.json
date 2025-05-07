@@ -25,7 +25,7 @@
                 // "esbenp.prettier-vscode",                   //コード整形ツール
                 // "VisualStudioExptTeam.vscodeintellicode",   //AIを活用しより高度で文脈に応じたコード提案を行う。
                 // "christian-kohler.path-intellisense",       //ファイルやフォルダをインポートする際、パスを入力する手間を省略。
-                // // "mhutchie.git-graph",                      //ブランチやコミットの流れをグラフ形式で確認可能。
+                // // "mhutchie.git-graph",                      //ブランチやコミットの流れを色付きグラフ形式で確認可能。
                 // // "donjayamanne.githistory",                 //Gitのコミット履歴を表示。
                 // "oderwat.indent-rainbow",                   //インデントをレインボーカラーで視覚化。
                 // "vscode-icons-team.vscode-icons"            //ファイルやフォルダに視覚的なアイコンを追加。
