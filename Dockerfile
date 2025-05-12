@@ -9,8 +9,8 @@ USER root
 # 使用するパッケージはここで入れる
 RUN apt update && apt install -y build-essential && apt install -y git && rm -rf /var/lib/apt/lists/*
 
-COPY . .
+COPY ./analizeCode .
 
 USER jovyan
 
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt

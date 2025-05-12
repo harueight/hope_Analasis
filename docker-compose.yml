@@ -1,16 +1,31 @@
 services:
+  selenium:
+    image: seleniarm/standalone-chromium
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    shm_size: 3gb
+    volumes:
+      - ./scraping:/home/seluser/Downloads
+
   python:
     build:
       context: .
       dockerfile: Dockerfile
+    volumes:
+      # - type: bind
+      #   source: ./analizeCode
+      #   target: /home/jovyan/work
+      - ./analizeCode:/home/jovyan/work
+      - ./scraping:/home/jovyan/work/shared_downloads  # ← 追加  
+    stdin_open: true    
     tty: true
     ports:
-      - 8888:8888
-    volumes:
-      - type: bind
-        source: .
-        target: /home/jovyan/work
-        consistency: cached
+      - 8888:8888    
+    depends_on:
+      - selenium
+    environment:
+      - SELENIUM_HOST=selenium          
     command:  # 以下を指定することでトークンなしでアクセスできるようになる
       - "start-notebook.py"
       - "--IdentityProvider.token=''"
