@@ -6,7 +6,7 @@ services:
       - "7900:7900"
     shm_size: 3gb
     volumes:
-      - ./scraping:/home/seluser/Downloads
+      - ./shared_downloads:/home/seluser/Downloads
 
   python:
     build:
@@ -16,8 +16,8 @@ services:
       # - type: bind
       #   source: ./analizeCode
       #   target: /home/jovyan/work
-      - ./analizeCode:/home/jovyan/work
-      - ./scraping:/home/jovyan/work/shared_downloads  # ← 追加  
+      - .:/home/jovyan/work
+      - ./shared_downloads:/home/jovyan/work/shared_downloads  # ← 追加  
     stdin_open: true    
     tty: true
     ports:
